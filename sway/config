@@ -112,16 +112,16 @@ output * bg ~/.config/wallpaper/GNU-generation.png fill
 #
     # Define names for default workspaces for which we configure key bindings later on.
     # We use variables to avoid repeating the names in multiple places.
-    set $ws1  "1: terminal"
+    set $ws1  "1: term"
     set $ws2  "2: code"
     set $ws3  "3: web"
-    set $ws4  "4: files"
-    set $ws5  "5: document"
+    set $ws4  "4: docs"
+    set $ws5  "5: music"
     set $ws6  "6: chat"
     set $ws7  "7"
     set $ws8  "8"
-    set $ws9  "9: misc"
-    set $ws10 "0: console"
+    set $ws9  "9: wine"
+    set $ws10 "0"
 
     # switch to workspace
     bindsym $mod+1 workspace $ws1
