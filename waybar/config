@@ -117,7 +117,7 @@
             "default": ["","",""]
         },
         "scroll-step": 1,
-        "on-click": "pactl set-sink-mute 0 toggle",
+        "on-click": "pamixer -t",
         "on-click-right": "pavucontrol"
     },
     "memory": {
