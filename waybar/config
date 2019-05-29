@@ -3,7 +3,7 @@
 {
     "layer"    : "bottom",   // Waybar at top layer (top|bottom)
     "position" : "top",      // Waybar position (top|bottom|left|right)
-    "height"   : "",        // Waybar height (leave blank for auto height)
+    "height"   : "",         // Waybar height (leave blank for auto height)
     "width"    : "",         // Waybar width  (leave blank for auto width )
 
     "modules-left": [
@@ -111,25 +111,21 @@
     "pulseaudio": {
         "format": "{icon}  {volume}%",
         "format-bluetooth": "{icon}  {volume}%",
-        "format-muted": "",
+        "format-muted": " 0%",
         "format-icons": {
             "headphones": "",
-            "default": [
-                "",
-                "",
-                ""
-            ]
+            "default": ["","",""]
         },
-        "scroll-step": 5,
-        "on-click": "pamixer -t",
+        "scroll-step": 1,
+        "on-click": "pactl set-sink-mute 0 toggle",
         "on-click-right": "pavucontrol"
     },
     "memory": {
-        "interval": 5,
+        "interval": 60,
         "format": " {}%"
     },
     "cpu": {
-        "interval": 5,
+        "interval": 60,
         "format": " {usage:2}%"
     },
     "network": {
