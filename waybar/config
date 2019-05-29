@@ -7,6 +7,10 @@
     "width"    : "",         // Waybar width  (leave blank for auto width )
 
     "modules-left": [
+        "mpd",
+        "custom/right-arrow-dark",
+        "custom/right-arrow-light",
+
         "sway/window",
         "custom/right-arrow-dark"
     ],
@@ -14,9 +18,11 @@
         "custom/left-arrow-dark",
         "clock#1",
         "custom/left-arrow-light",
+        
         "custom/left-arrow-dark",
         "clock#2",
         "custom/right-arrow-dark",
+        
         "custom/right-arrow-light",
         "clock#3",
         "custom/right-arrow-dark"
@@ -25,20 +31,29 @@
         "custom/left-arrow-dark",
         "pulseaudio",
         "custom/left-arrow-light",
+
         "custom/left-arrow-dark",
         "memory",
         "custom/left-arrow-light",
+        
         "custom/left-arrow-dark",
         "cpu",
         "custom/left-arrow-light",
+        
         "custom/left-arrow-dark",
         "network",
         "custom/left-arrow-light",
+        
         "custom/left-arrow-dark",
         "battery",
         "custom/left-arrow-light",
+        
         "custom/left-arrow-dark",
-        "tray"
+        "tray",
+        "custom/left-arrow-light",
+        
+        "custom/left-arrow-dark",
+        "idle_inhibitor"
     ],
 
     "custom/left-arrow-dark": {
@@ -149,6 +164,40 @@
         // "format-good": "", // An empty format will hide the module
         // "format-full": "",
         "format-icons": ["","","","",""]
+    },
+    "mpd": {
+        "format": "{stateIcon} {consumeIcon}{randomIcon}{repeatIcon}{singleIcon}{artist} - {album} - {title} ({elapsedTime:%M:%S}/{totalTime:%M:%S}) ",
+        "format-disconnected": "Disconnected ",
+        "format-stopped": "{consumeIcon}{randomIcon}{repeatIcon}{singleIcon}Stopped ",
+        "unknown-tag": "N/A",
+        "interval": 1,
+        "consume-icons": {
+            "on": " "
+        },
+        "random-icons": {
+            "off": "<span color=\"#f53c3c\"></span> ",
+            "on": " "
+        },
+        "repeat-icons": {
+            "on": " "
+        },
+        "single-icons": {
+            "on": "1 "
+        },
+        "state-icons": {
+            "paused": "",
+            "playing": ""
+        },
+        "tooltip-format": "MPD (connected)",
+        "tooltip-format-disconnected": "MPD (disconnected)"
+    },
+    "idle_inhibitor": {
+        "format": "{icon}",
+        "format-icons": {
+            "activated"  : "",
+            "deactivated": "<span color=\"#2c2b29\"></span>",
+            "tooltip"    : false
+        }
     },
     "tray": {
         "icon-size": 12

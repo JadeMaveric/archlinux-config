@@ -16,7 +16,7 @@ window#waybar {
     background: #1a1a1a;
 }
 
-#workspaces, #clock.1, #clock.2, #clock.3, #pulseaudio, #backlight, #memory, #cpu, #temperature, #network, #battery, #tray {
+#workspaces, #mpd, #idle_inhibitor, #clock.1, #clock.2, #clock.3, #pulseaudio, #backlight, #memory, #cpu, #temperature, #network, #battery, #tray {
     background: #1a1a1a;
 }
 
