@@ -121,7 +121,7 @@ output * bg ~/.config/wallpaper/GNU-generation.png fill
     set $ws7  "7"
     set $ws8  "8"
     set $ws9  "9: wine"
-    set $ws10 "0"
+    set $ws10 "0: utils"
 
     # switch to workspace
     bindsym $mod+1 workspace $ws1
@@ -148,12 +148,12 @@ output * bg ~/.config/wallpaper/GNU-generation.png fill
     bindsym $mod+Shift+0 move container to workspace $ws10
 
     # automatically put clients on specific workspaces
+    assign [class="^tm$"]  number "4: docs"
+    assign [class="^pr$"]  number "4: docs"
+    assign [class="^pm$"]  number "4: docs"
     assign [class="^code-oss$"]  number "2: code"
-    assign [class="^Firefox$"]  number "3: web"
-    assign [class="^Org.gnome.Nautilus$"]  number "4: files"
-    assign [class="^tm$"]  number "5: document"
-    assign [class="^pr$"]  number "5: document"
-    assign [class="^pm$"]  number "5: document"
+    assign [class="^Firefox$"]   number "3: web"
+    assign [class="^Org.gnome.Nautilus$"]  number "0: utils"
 
 #
 
