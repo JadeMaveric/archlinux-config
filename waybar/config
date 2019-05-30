@@ -1,5 +1,5 @@
 // vim:ft=json
-
+[
 {
     "layer"    : "bottom",   // Waybar at top layer (top|bottom)
     "position" : "top",      // Waybar position (top|bottom|left|right)
@@ -7,11 +7,11 @@
     "width"    : "",         // Waybar width  (leave blank for auto width )
 
     "modules-left": [
-        "mpd",
+        "sway/workspaces",
         "custom/right-arrow-dark",
         "custom/right-arrow-light",
-
-        "sway/window",
+        
+        "mpd",
         "custom/right-arrow-dark"
     ],
     "modules-center": [
@@ -74,9 +74,9 @@
     },
 
     "sway/window": {
-        "format" : "{}",
-        "tooltip": "false",
-        "max-length": 50
+        "format" : "{name} {icon}",
+        "tooltip": "true",
+        "max-length": 20
     },
 
     // Modules configuration
@@ -109,7 +109,7 @@
             "9: wine" : []         // Always show, on all outputs
         }
     },
-
+    
     "clock#1": {
         "format": "{:%a}",
         "tooltip": false
@@ -119,7 +119,7 @@
         "tooltip": false
     },
     "clock#3": {
-        "format": "{:%m-%d}",
+        "format": "{:%b %_d}",
         "tooltip": false
     },
 
@@ -149,24 +149,25 @@
         "format-ethernet": " {ifname}",
         "format-linked"  : " {ifname}",
         "format-disconnected": "",
-        "format-alt": "{ifname} : {ipaddr}/{cidr} {bandwidthUpBits} {bandwidthDownBits} ({signalStrength}%)"
+        "format-alt": "{ifname} : {ipaddr}/{cidr} {bandwidthUpBits} {bandwidthDownBits} ({signalStrength}%)",
+        "tooltip-format": "{ifname}\n{ipaddr}/{cidr}\n{bandwidthUpBits} {bandwidthDownBits}\n{signalStrength}%"
     },
     "battery": {
         "states": { 
-            "good": 95,
-            "warning": 30,
-            "critical": 15
+            "good": 100,
+            "warning": 50,
+            "critical": 20
         },
         "format": "{icon} {capacity}%",
         "format-charging": " {capacity}%",
         "format-plugged": " {capacity}%",
         "format-alt": "{icon} {time}",
-        // "format-good": "", // An empty format will hide the module
-        // "format-full": "",
+        "format-full": " 100%",
         "format-icons": ["","","","",""]
     },
     "mpd": {
-        "format": "{stateIcon} {consumeIcon}{randomIcon}{repeatIcon}{singleIcon}{artist} - {album} - {title} ({elapsedTime:%M:%S}/{totalTime:%M:%S}) ",
+        "format": "{stateIcon}{repeatIcon} {title} {elapsedTime:%M:%S}/{totalTime:%M:%S} ",
+        //"format": "{stateIcon} {consumeIcon}{randomIcon}{repeatIcon}{singleIcon}{artist} - {album} - {title} ({elapsedTime:%M:%S}/{totalTime:%M:%S}) ",
         "format-disconnected": "Disconnected ",
         "format-stopped": "{consumeIcon}{randomIcon}{repeatIcon}{singleIcon}Stopped ",
         "unknown-tag": "N/A",
@@ -203,3 +204,4 @@
         "icon-size": 12
     }
 }
+]

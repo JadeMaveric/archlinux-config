@@ -1,11 +1,12 @@
 * {
+    min-height: 0px;
     font-size: 13px;
     font-family: 'Font Awesome 5 Free Solid';
 }
 
 window#waybar {
     background: #292b2e;
-    color: #fdf6e3;
+    color: #ebe7df;
 }
 
 #custom-right-arrow-dark, #custom-left-arrow-dark {
@@ -20,14 +21,23 @@ window#waybar {
     background: #1a1a1a;
 }
 
+#mpd {
+    font-family: monospace;
+}
+
 #window {
     font-family: monospace;
     background: #1a1a1a;
 }
 
+#workspaces {
+    padding: 0px;
+    margin: 0px;
+}
+
 #workspaces button {
     padding: 0px;
-    color: #fdf6e3;
+    color: #f5efe0;
 }
 #workspaces button.focused {
     color: #268bd2;
@@ -42,24 +52,35 @@ window#waybar {
     color: #2a6ba1;
 }
 
+#clock.1, #clock.2, #clock.3 {
+    font-family: 'monospace';
+}
+
 #pulseaudio {
-    color: #268bd2;
+    color: #2494e4;
 }
 #backlight {
     color: #b58900
 }
 #memory {
-    color: #2aa198;
+    color: #2cb8ac;
 }
 #temperature {
-    color: #b58900
+    color: #d4a824
 }
 #cpu {
-    color: #6c71c4;
+    color: #686ee9;
 }
-#battery {
-    color: #859900;
+#battery.good {
+    color: #15d62f;
 }
+#battery.warning {
+    color: #c5df1e;
+}
+#battery.critical {
+    color: #ee2e0c;
+}
+
 
 #clock, #pulseaudio, #backlight, #memory, #cpu, #temperature, #battery {
     padding: 0px 5px;
