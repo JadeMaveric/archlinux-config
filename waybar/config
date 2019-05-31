@@ -9,9 +9,13 @@
     "modules-left": [
         "sway/workspaces",
         "custom/right-arrow-dark",
+
         "custom/right-arrow-light",
-        
         "mpd",
+        "custom/right-arrow-dark",
+
+        "custom/right-arrow-light",
+        "custom/pomodoro",
         "custom/right-arrow-dark"
     ],
     "modules-center": [
@@ -109,17 +113,29 @@
             "9: wine" : []         // Always show, on all outputs
         }
     },
+
+    "custom/pomodoro": {
+        "exec": "/home/julius/.config/pomodoro/format.sh",
+        "return-type": "json",
+        "interval": 1,
+        "format": " {icon} {} ",
+        "format-icons": ["", "", "", ""],
+        "on-click": "i3-gnome-pomodoro toggle",
+        "on-right-click": "i3-gnome-pomodoro skip"
+    },
     
     "clock#1": {
-        "format": "{:%a}",
+        "format": "{:%A}",
         "tooltip": false
     },
     "clock#2": {
         "format": "{:%H:%M}",
-        "tooltip": false
+        "format-alt": "{:%H:%M:%S}",
+        "tooltip": false,
+        "interval": 1
     },
     "clock#3": {
-        "format": "{:%b %_d}",
+        "format": "{: %b %_d}",
         "tooltip": false
     },
 
@@ -150,6 +166,7 @@
         "format-linked"  : " {ifname}",
         "format-disconnected": "",
         "format-alt": "{ifname} : {ipaddr}/{cidr} {bandwidthUpBits} {bandwidthDownBits} ({signalStrength}%)",
+        "on-click-right": "nm-connection-editor",
         "tooltip-format": "{ifname}\n{ipaddr}/{cidr}\n{bandwidthUpBits} {bandwidthDownBits}\n{signalStrength}%"
     },
     "battery": {
