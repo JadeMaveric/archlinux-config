@@ -11,10 +11,6 @@
         "custom/right-arrow-dark",
 
         "custom/right-arrow-light",
-        "mpd",
-        "custom/right-arrow-dark",
-
-        "custom/right-arrow-light",
         "custom/pomodoro",
         "custom/right-arrow-dark"
     ],
@@ -34,29 +30,14 @@
     "modules-right": [
         "custom/left-arrow-dark",
         "pulseaudio",
-        "custom/left-arrow-light",
-
-        "custom/left-arrow-dark",
         "memory",
-        "custom/left-arrow-light",
-        
-        "custom/left-arrow-dark",
         "cpu",
-        "custom/left-arrow-light",
-        
-        "custom/left-arrow-dark",
         "network",
-        "custom/left-arrow-light",
-        
-        "custom/left-arrow-dark",
         "battery",
         "custom/left-arrow-light",
         
         "custom/left-arrow-dark",
         "tray",
-        "custom/left-arrow-light",
-        
-        "custom/left-arrow-dark",
         "idle_inhibitor"
     ],
 
@@ -118,7 +99,7 @@
         "exec": "/home/julius/.config/pomodoro/format.sh",
         "return-type": "json",
         "interval": 1,
-        "format": " {icon} {} ",
+        "format": "{icon} {} ",
         "format-icons": ["", "", "", ""],
         "on-click": "i3-gnome-pomodoro toggle",
         "on-right-click": "i3-gnome-pomodoro skip"
@@ -135,7 +116,7 @@
         "interval": 1
     },
     "clock#3": {
-        "format": "{: %b %_d}",
+        "format": "{:%b %d}",
         "tooltip": false
     },
 
