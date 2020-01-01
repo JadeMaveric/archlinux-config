@@ -8,11 +8,11 @@
 
     "modules-left": [
         "sway/workspaces",
-        "custom/right-arrow-dark",
-
-        "custom/right-arrow-light",
-        "custom/pomodoro",
         "custom/right-arrow-dark"
+
+        // "custom/right-arrow-light",
+        // "custom/pomodoro",
+        // "custom/right-arrow-dark"
     ],
     "modules-center": [
         "custom/left-arrow-dark",
